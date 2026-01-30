@@ -44,16 +44,6 @@ The application leverages **Context API** for global state management and **Fire
 **Backend / BaaS:**
 * ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase) **Firebase Authentication & Firestore**
 
-## 📸 Screenshots
-
-| Landing Page | Dark Mode |
-|:---:|:---:|
-| ![Landing Light](path/to/screenshot1.png) | ![Landing Dark](path/to/screenshot2.png) |
-
-| Product Details | Admin Dashboard |
-|:---:|:---:|
-| ![Details](path/to/screenshot3.png) | ![Admin](path/to/screenshot4.png) |
-
 ## 💻 Installation & Setup
 
 1.  **Clone the repository:**
