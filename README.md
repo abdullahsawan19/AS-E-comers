@@ -87,9 +87,6 @@ The application leverages **Context API** for global state management and **Fire
 ## 👨‍💻 Author
 
 **Abdullah Sawan**
-* **Role:** MERN Stack Developer
-* **GitHub:** [@abdullahsawan19](https://github.com/abdullahsawan19)
-* **LinkedIn:** [Abdullah Sawan](https://www.linkedin.com/in/abdullah-sawan-064ba127a/)
 
 ---
 *This project was built for educational purposes to demonstrate proficiency in React and Firebase integration.*
