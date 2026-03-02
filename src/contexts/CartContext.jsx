@@ -15,10 +15,11 @@ export function CartProvider({ children }) {
   const [snackbarMessage, setSnackbarMessage] = useState("");
 
   const user = JSON.parse(localStorage.getItem("loggedInUser"));
+  const userId = user?.uid;
 
   useEffect(() => {
-    if (user) {
-      const cartRef = doc(db, "carts", user.uid);
+    if (userId) {
+      const cartRef = doc(db, "carts", userId);
       const unsubscribe = onSnapshot(cartRef, (docSnap) => {
         if (docSnap.exists()) {
           setCart(docSnap.data().items || []);
@@ -28,7 +29,7 @@ export function CartProvider({ children }) {
       });
       return () => unsubscribe();
     }
-  }, [user]);
+  }, [userId]);
 
   const syncCartToFirestore = async (newCart) => {
     if (!user) return;

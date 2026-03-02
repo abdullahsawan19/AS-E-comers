@@ -1,6 +1,6 @@
 //React imports
 import React, { useRef } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useCart } from "../../contexts/CartContext";
 
 // MUI imports
@@ -24,7 +24,6 @@ import { motion, useInView } from "framer-motion";
 export default function MotionCard({ product, index }) {
   const { addToCart } = useCart();
 
-  const navigate = useNavigate();
   const ref = useRef(null);
   const inView = useInView(ref, {
     triggerOnce: true,

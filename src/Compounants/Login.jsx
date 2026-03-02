@@ -113,7 +113,7 @@ export default function Login() {
         } else {
           navigate("/user-dashboard");
         }
-      }, 1500);
+      }, 1000);
     } catch (err) {
       console.error("Login error:", err);
       setError("Login failed: " + err.message);

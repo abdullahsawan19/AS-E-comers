@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // MUI Imports
 import {
@@ -86,7 +86,6 @@ function ResponsiveAppBar() {
   const { darkMode } = useDarkMode();
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [user, setUser] = React.useState(null);
-  const navigate = useNavigate();
   const { searchTerm, setSearchTerm } = useSearch();
 
   React.useEffect(() => {
