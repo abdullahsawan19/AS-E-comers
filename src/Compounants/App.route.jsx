@@ -8,7 +8,7 @@ import Profile from "./userCompounants/Profile";
 import Logout from "./userCompounants/Logout";
 import ProductDetails from "./userCompounants/ProductDetails";
 
-export default function Collect() {
+export default function AppRoute() {
   return (
     <Routes>
       <Route path="/" element={<Login />} />

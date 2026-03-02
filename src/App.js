@@ -2,10 +2,10 @@ import { Routes, Route } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { DarkModeProvider } from "./contexts/DarkModeContext";
-import Collect from "./Compounants/Collect";
 import ProductsProvider from "./contexts/ApiContext";
 import { CartProvider } from "./contexts/CartContext";
 import { SearchProvider } from "./contexts/SearchContext";
+import AppRoute from "./Compounants/App.route.jsx";
 
 const theme = createTheme({
   typography: {
@@ -22,7 +22,7 @@ function App() {
           <CartProvider>
             <SearchProvider>
               <Routes>
-                <Route path="/*" element={<Collect />} />
+                <Route path="/*" element={<AppRoute />} />
               </Routes>
             </SearchProvider>
           </CartProvider>
