@@ -1,70 +1,92 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🛒 AS E-Commerce
 
-## Available Scripts
+**AS E-Commerce** is a modern, fully responsive Single Page Application (SPA) built with **React** and **Material UI**. It features a dynamic product catalog, a comprehensive shopping cart system synced with Firestore, user authentication, and a dedicated admin dashboard.
 
-In the project directory, you can run:
+The application leverages **Context API** for global state management and **Firebase** for backend services (Authentication & Database).
 
-### `npm start`
+## 🚀 Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Insert Link to Live Demo Here] 
+## ✨ Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 👤 User Experience
+* **Authentication:** Secure Sign-up, Login, and Logout functionality using **Firebase Auth**.
+* **Responsive Design:** Fully optimized for Mobile, Tablet, and Desktop using **Material UI**.
+* **Dark/Light Mode:** Theme persistence using LocalStorage.
+* **Product Browsing:** * Fetch products from external API (DummyJSON).
+    * Filter products by categories (Mobile, Laptop, Furniture, Fashion, etc.).
+    * Real-time Search functionality.
+* **Product Details:** * Image slider/carousel for product viewing.
+    * Detailed description, price, rating, and reviews.
+* **Shopping Cart:** * Add/Remove items.
+    * Increase/Decrease quantities.
+    * **Real-time Sync:** Cart data is saved to **Firebase Firestore**, so users don't lose their cart when switching devices.
 
-### `npm test`
+### 🛡️ Admin Dashboard
+* **User Management:** View all registered users.
+* **Order Monitoring:** Admin can view the current cart/orders of each user.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### ⚙️ Technical Highlights
+* **State Management:** Utilizes React Context API (`CartContext`, `AuthContext`, `SearchContext`, `DarkModeContext`) to avoid prop-drilling.
+* **Routing:** Client-side routing with `react-router-dom`.
+* **Toast Notifications:** Interactive feedback using MUI Snackbars (e.g., "Product added successfully").
 
-### `npm run build`
+## 🛠️ Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Frontend:**
+* ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) **React.js**
+* ![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white) **Material UI**
+* ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) **Vite**
+* **Axios** (API Requests)
+* **Framer Motion** (Animations)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Backend / BaaS:**
+* ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase) **Firebase Authentication & Firestore**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 💻 Installation & Setup
 
-### `npm run eject`
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/abdullahsawan19/AS-E-comers.git](https://github.com/abdullahsawan19/AS-E-comers.git)
+    cd AS-E-comers
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2.  **Install Dependencies:**
+    ```bash
+    npm install
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3.  **Firebase Configuration:**
+    * Create a `firebase.js` file in your `src` folder.
+    * Add your Firebase configuration keys:
+    ```javascript
+    import { initializeApp } from "firebase/app";
+    import { getAuth } from "firebase/auth";
+    import { getFirestore } from "firebase/firestore";
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_AUTH_DOMAIN",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_STORAGE_BUCKET",
+      messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+      appId: "YOUR_APP_ID"
+    };
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    const app = initializeApp(firebaseConfig);
+    export const auth = getAuth(app);
+    export const db = getFirestore(app);
+    ```
 
-## Learn More
+4.  **Run the Project:**
+    ```bash
+    npm run dev
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 👨‍💻 Author
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Abdullah Sawan**
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+*This project was built for educational purposes to demonstrate proficiency in React and Firebase integration.*
