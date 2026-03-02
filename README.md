@@ -5,7 +5,8 @@
 
 The application leverages **Context API** for global state management and **Firebase** for backend services (Authentication & Database).
 
-## 🚀 Live Demo : as-e-comers.vercel.app
+## 🚀 Live Demo : [Click Here to View the App](https://as-e-comers.vercel.app)
+
 ## ✨ Features
 
 ### 👤 User Experience
