@@ -80,7 +80,7 @@ The application leverages **Context API** for global state management and **Fire
 
 4.  **Run the Project:**
     ```bash
-    npm run dev
+    npm start
     ```
 
 ## 👨‍💻 Author
